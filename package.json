@@ -1,5 +1,5 @@
 {
-  "name": "node-paperclip-detection",
+  "name": "node-paperclip-opencv-detection",
   "version": "1.0.1",
   "description": "",
   "main": "index.js",
@@ -10,6 +10,11 @@
   "license": "MIT",
   "devDependencies": {
     "mocha": "^4.0.1"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ballantyne/node-paperclip-opencv-detection.git"
   },
   "dependencies": {
     "opencv": "^6.0.0"
