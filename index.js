@@ -16,18 +16,23 @@ module.exports            = function(paperclip) {
     cv.readImage(this.paperclip.file().file.buffer, function(err, im){
       im.detectObject(cv[options.object_type], {}, function(err, faces){
         if (faces && faces.length > 0) {
-        switch(options.object_type) { 
-          case 'FACE_CASCADE':
-            next(err, {faces: {count: faces.length, data: faces}});
-          case 'EYE_CASCADE':
-            next(err, {eyes: {count: faces.length, data: faces}});
-          case 'EYEGLASSES_CASCADE':
-            next(err, {glasses: {count: faces.length, data: faces}});
-          case 'FULLBODY_CASCADE':
-            next(err, {cars: {count: faces.length, data: faces}});       
-          case 'CAR_SIDE_CASCADE':
-            next(err, {car_profiles: {count: faces.length, data: faces}});      
-        }
+          switch(options.object_type) { 
+            case 'FACE_CASCADE':
+              next(err, {faces: {count: faces.length, data: faces}});
+              break;
+            case 'EYE_CASCADE':
+              next(err, {eyes: {count: faces.length, data: faces}});
+              break;
+            case 'EYEGLASSES_CASCADE':
+              next(err, {glasses: {count: faces.length, data: faces}});
+              break;
+            case 'FULLBODY_CASCADE':
+              next(err, {cars: {count: faces.length, data: faces}});       
+              break;
+            case 'CAR_SIDE_CASCADE':
+              next(err, {car_profiles: {count: faces.length, data: faces}});      
+              break;
+          }
         } else {
           next(err, {});
         }
