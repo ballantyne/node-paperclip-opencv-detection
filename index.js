@@ -13,9 +13,9 @@ module.exports            = function(paperclip) {
     }
 
 
-    cv.readImage(this.paperclip.file.buffer, function(err, im){
+    cv.readImage(this.paperclip.file().file.buffer, function(err, im){
       im.detectObject(cv[options.object_type], {}, function(err, faces){
-        if (faces.length > 0) {
+        if (faces && faces.length > 0) {
         switch(options.object_type) { 
           case 'FACE_CASCADE':
             next(err, {faces: {count: faces.length, data: faces}});
