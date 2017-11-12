@@ -1,4 +1,4 @@
-node-paperclip-opencv
+node-paperclip-opencv-detection
 
 =========
 
@@ -7,7 +7,7 @@ This is a plugin that works with node-paperclip.  It reads images and recognizes
 To install 
 
 ```bash
-npm install node-paperclip-detection --save
+npm install node-paperclip-opencv-detection --save
 ```
 
 Here is an example of a model that uses the mongoose plugin.
@@ -22,7 +22,7 @@ const Image = new Schema({});
 Image.plugin(Paperclip.plugins.mongoose, {
   image: {
     image: { 
-      before_save: [{task: require('node-paperclip-opencv')}]
+      before_save: [{task: require('node-paperclip-opencv-detection')}]
       class_name: 'image',
       has_attached_file: 'image', 
       styles: [
