@@ -1,5 +1,4 @@
 node-paperclip-opencv-detection
-
 =========
 
 This is a plugin that works with node-paperclip.  It reads images and recognizes objects or faces.  This is mostly a demonstration showing how to integrate with node-paperclip.  I would be very interested to hear other people's ideas about how to configure this so that it can be more useful for more general purposes like training to detect arbitrary things from data sets that are provided by the user.  As I learn more about opencv, I'll try to improve this.   
