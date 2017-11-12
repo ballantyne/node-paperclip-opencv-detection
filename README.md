@@ -7,7 +7,7 @@ This is a plugin that works with node-paperclip.  It reads images and recognizes
 To install 
 
 ```bash
-npm install node-paperclip-opencv --save
+npm install node-paperclip-detection --save
 ```
 
 Here is an example of a model that uses the mongoose plugin.
