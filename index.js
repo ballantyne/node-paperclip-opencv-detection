@@ -51,15 +51,21 @@ module.exports            = function(paperclip) {
       im.detectObject(options.dataset, {}, function(err, objects){
         var object = {};
 
-        object[options.attribute] = { count: objects.length, data: objects };
         
         if (objects.length > 0 || options.presence) {
+          
+          object[options.attribute] = { count: objects.length, data: objects };
+
           if (objects.length > 0 && options.tag) {
             object.object_tags = [options.attribute]
           }
+  
           next(err, object);
+
         } else {
+        
           next(err, {});
+        
         }
 
       });
