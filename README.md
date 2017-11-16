@@ -21,7 +21,7 @@ const Image = new Schema({});
 Image.plugin(Paperclip.plugins.mongoose, {
   image: {
     image: { 
-      before_save: [{task: require('node-paperclip-opencv-detection')}]
+      before_save: [{task: require('node-paperclip-opencv-detection')}],
       storage: 'file'
     }
   }
