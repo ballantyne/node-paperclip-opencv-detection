@@ -22,11 +22,6 @@ Image.plugin(Paperclip.plugins.mongoose, {
   image: {
     image: { 
       before_save: [{task: require('node-paperclip-opencv-detection')}]
-      class_name: 'image',
-      has_attached_file: 'image', 
-      styles: [
-        { original: true },
-      ],
       storage: 'file'
     }
   }
